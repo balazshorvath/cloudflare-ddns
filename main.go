@@ -1,12 +1,13 @@
 package main
 
 import (
-	"os"
+	"time"
 
-	"github.com/rs/zerolog"
+	srv "github.com/balazshorvath/go-srv"
+
+	"CloudflareDDNS/server"
 )
 
 func main() {
-	logger := zerolog.New(os.Stderr)
-	logger.Info().Msg("Hello there!")
+	srv.CreateAndRunServer(server.New, 5*time.Second)
 }
