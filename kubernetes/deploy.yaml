@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflare-ddns
+spec:
+  selector:
+    matchLabels:
+      app: cloudflare-ddns
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cloudflare-ddns
+    spec:
+      containers:
+        - image: artifactory.oryk.hu/default/cfddns/ddns-service:latest
+          name: cloudflare-ddns
