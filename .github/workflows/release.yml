@@ -27,4 +27,4 @@ jobs:
         with:
           push: true
           file: docker/Dockerfile
-          tags: ghcr.io/balazshorvath/cloudflare-ddns:latest,ghcr.io/balazshorvath/cloudflare-ddns:$RELEASE_VERSION
+          tags: ghcr.io/balazshorvath/cloudflare-ddns:latest,ghcr.io/balazshorvath/cloudflare-ddns:${{ env.RELEASE_VERSION }}
