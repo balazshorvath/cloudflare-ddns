@@ -14,5 +14,5 @@ spec:
         app: cloudflare-ddns
     spec:
       containers:
-        - image: artifactory.oryk.hu/default/cfddns/ddns-service:latest
+        - image: ghcr.io/balazshorvath/cloudflare-ddns:latest
           name: cloudflare-ddns
