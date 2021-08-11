@@ -7,7 +7,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -mod vendor -o cfddns .
 
 FROM alpine:latest
 
-WORKDIR /otp/cfddns
+WORKDIR /opt/cfddns
 COPY --from=builder /opt/cfddns/cfddns .
 
 CMD ["./cfddns"]
